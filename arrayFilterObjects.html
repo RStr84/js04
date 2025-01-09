@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+// Aufgabe: aus personen alle Frauen ausgeben
+const personen = [
+{vorname: "Ipek", geschlecht: "w"},
+{vorname: "Thor", geschlecht: "m"},
+{vorname: "Romy", geschlecht: "d"}
+];
+
+// Herangehensweise mit Objekten
+const woman = personen.filter(person => person.geschlecht === "w");
+
+// Alternative Funktion als Parameter
+const woman1 = personen.filter(function(element) {return element.geschlecht === "w"});
+
+console.log(woman);
+console.log(woman1);
+
+</script>
+
+</body>
+</html>

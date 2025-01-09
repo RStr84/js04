@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>JavaScript Arrays</h1>
+<h2>The reduce() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+  const numbers = [45, 4, 9, 16, 25];
+
+  const myFunction = function (total, value, index , array) {
+    return total + value;
+  }
+  let sum = numbers.reduce(myFunction);
+  console.log(sum);
+
+  // Kurzform
+  let sum2 = numbers.reduce(function (total, value, index , array) {
+    return total + value;
+  });
+  console.log(sum2);
+
+
+  // Aufgabe:
+  const textArr = ['ich', 'bin', 'heute', 'gut', 'drauf'];
+  // der Text soll in einen String mit Leerzeichen umgewandelt und ausgegeben werden
+  const text = textArr.reduce((accumulator, currentValue) => {
+    return accumulator + ' ' + currentValue.replace(/"/g, '');
+  }, '');
+  console.log(text.trim());
+
+
+
+</script>
+</body>
+</html>

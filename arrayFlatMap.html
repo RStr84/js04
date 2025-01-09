@@ -13,8 +13,14 @@
 
 <script>
   const myArr = [1, 2, 3, 4, 5, 6];
-  const newArr = myArr.flatMap(x => [x, x * 10]);
+  const newArr = myArr.map(function (x) {return [x, x * 10];});
+  const newArr2 = myArr.flatMap(function (x) {return [x, x * 10];});
+
   console.log(newArr);
+
+  // flatMap() erschafft aus einem 2-dim Array ein 1-dim Array
+  console.log(newArr2);
+
 </script>
 
 </body>
