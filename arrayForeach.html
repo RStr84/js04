@@ -10,12 +10,19 @@
 
     // in <Funktion> Zugriff auf Wert //
     // Array.forEach(<Funktion>)
+    // nur der Funktionsname wird übergeben
+    // Ausgabe Index und Wert
 
-    const arr1 = ['Claudia', 'Klein'];
-    const ausgeben = function (element) {
-        console.log(element);
+    const arr = ['Claudia', 'Klein'];
+    const ausgeben = function (element, index) {
+        console.log(index + ' ' + element);
     }
-    arr1.forEach(ausgeben);
+    arr.forEach(ausgeben);
+
+    // in Kurzform als anonyme Funktion (Funktion ohne Namen für einmaligen Gebrauch)
+    arr.forEach(function (element, index) {
+        console.log(index + ' ' + element);
+    });
 
 </script>
 
