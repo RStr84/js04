@@ -6,6 +6,11 @@
 </head>
 <body>
 
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
 <script>
 
     // in <Funktion> Zugriff auf Wert //
@@ -23,6 +28,32 @@
     arr.forEach(function (element, index) {
         console.log(index + ' ' + element);
     });
+
+</script>
+
+<script>
+
+    // Aufgabe: mit Hilfe der foreach-Methode in jeden Paragraphen ein x reinschreiben
+
+    // Langform Rolf
+    const ps = document.querySelectorAll('p');
+    const fill = function (element) {
+        element.innerHTML = 'x'
+    };
+    ps.forEach(fill);
+
+    // Kurzform
+    ps.forEach(function (element) {
+        element.innerHTML = 'x'
+    });
+
+
+    // Kurzform
+    const paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach(function (paragraph) {
+        paragraph.innerHTML = 'x'
+    });
+
 
 </script>
 

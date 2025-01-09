@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let x = 25;
+    let y;
+    const doublen = function () {
+        x = 2 * x;  // hat Zugriff auf x außerhalb der Funktion
+        y = 30;     // hat Zugriff auf y außerhalb der Funktion
+        // let y = 40; // y muss eindeutig sein, gültig innerhalb der Klammern
+                    // oder außerhalb, (und damit auch innerhalb) der geschweiften Klammern
+    }
+    doublen();
+    console.log(x);
+    // console.log(y);
+
+    // geschweifte Klammern bei Fallunterscheidung
+    let boolWert = false
+    if (boolWert) {
+        let a = 88;     // a ist nur zwischen {} sichtbar
+    } else {
+        a = 99;         // a ist auch außerhalb der {} sichtbar, dies sollen wir vermeiden
+    }
+    console.log(a);
+
+    // bei Fallunterscheidungen, die einen Variablenwert erzeugen, soll die Variable außerhalb deklariert
+    // werden:
+    let z;
+    if (boolWert) {
+        z = 44;
+    } else {
+        z = 34;
+    }
+    console.log(z);
+
+
+</script>
+
+</body>
+</html>
