@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // Zugriff auf Wert //
+    const arr1 = ['Claudia', 'Klein'];
+    for (const element of arr1) {
+        console.log(element);
+    }
+
+    // Zugriff auf Key+Wert nicht möglich //
+    const arr2 = ['Claudia', 'Klein'];
+    for (const [key, element] of arr2) {
+        console.log(key + ' ' + element);
+    }
+
+
+</script>
+
+</body>
+</html>
